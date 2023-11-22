@@ -878,7 +878,7 @@ class Fields {
     };
 }
 ```
-- ### Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah kamu deploy.
+- ### Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah di deploy.
 
 - Menambahkan package http dengan menjalankan `flutter pub add http` pada terminal Flutter
 
@@ -1128,7 +1128,7 @@ class Fields {
           )
         },
   ```
-  - ### Tampilkan seluruh atribut pada model item kamu pada halaman ini.
+  - ### Tampilkan seluruh atribut pada model item pada halaman ini.
     ```dart
     child: Card(
           margin: const EdgeInsets.all(16),
