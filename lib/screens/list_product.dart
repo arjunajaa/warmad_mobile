@@ -59,31 +59,32 @@ Widget build(BuildContext context) {
                     );
                 } else {
                     return ListView.builder(
-                        itemCount: snapshot.data!.length,
-                        itemBuilder: (_, index) => Container(
-                                margin: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 12),
-                                padding: const EdgeInsets.all(20.0),
-                                child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                    Text(
-                                    "${snapshot.data![index].fields.name}",
-                                    style: const TextStyle(
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.bold,
-                                    ),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text("${snapshot.data![index].fields.price}"),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                        "${snapshot.data![index].fields.description}")
-                                ],
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (_, index) => Card(
+                        elevation: 5,
+                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                            Text(
+                                "${index + 1}. ${snapshot.data![index].fields.name}",
+                                style: const TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
                                 ),
-                            ));
-                    }
+                            ),
+                            const SizedBox(height: 10),
+                            Text("Price: ${snapshot.data![index].fields.price}"),
+                            const SizedBox(height: 10),
+                            Text("Description: ${snapshot.data![index].fields.description}"),
+                            ],
+                        ),
+                        ),
+                    ),
+                    );
+                }
                 }
             }));
     }
